@@ -44,33 +44,33 @@ Create a diagram depicting the situation where the user goes to the  [single-pag
 My Solution 
 ```mermaid
 sequenceDiagram
-participant  browser
-participant  server
-browser->>server: HTTP  GET  request  https://studies.cs.helsinki.fi/exampleapp/spa
+participant browser
+participant server
+browser->>server: HTTP GET request  https://studies.cs.helsinki.fi/exampleapp/spa
 server-->>browser: HTTP STATUS CODE 200 OK sends HTML file
-browser->>server: HTTP  GET  request  https://studies.cs.helsinki.fi/exampleapp/main.css
+browser->>server: HTTP GET request  https://studies.cs.helsinki.fi/exampleapp/main.css
 server-->>browser: HTTP STATUS CODE 200 OK sends CSS file
-browser->>server: HTTP  GET  request  https://studies.cs.helsinki.fi/exampleapp/spa.js
+browser->>server: HTTP GET request  https://studies.cs.helsinki.fi/exampleapp/spa.js
 server-->>browser: HTTP STATUS CODE 200 OK sends JS file
-Note  right  of  browser: Browser"GET", "/exampleapp/data.json" from spa.js file
-browser->>server: HTTP  GET  request  https://studies.cs.helsinki.fi/exampleapp/data.json
+Note right of browser: Browser"GET", "/exampleapp/data.json" from spa.js file
+browser->>server: HTTP GET request  https://studies.cs.helsinki.fi/exampleapp/data.json
 server-->>browser: HTTP STATUS CODE 200 OK sends back json data
-Note  right  of  browser: browser executes the event handler
-Note  right  of  browser: that renders notes to display
-participant  browser
-participant  server
+Note right of browser: browser executes the event handler
+Note right of browser: that renders notes to display
+participant browser
+participant server
 ```
 #### 0.6: New note in Single page app diagram
 Create a diagram depicting the situation where the user creates a new note using the single-page version of the app.
 My Solution 
 ```mermaid
 sequenceDiagram
-participant  browser
-participant  server
-browser->>server: HTTP  POST  request  https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+participant browser
+participant server
+browser->>server: HTTP POST request  https://studies.cs.helsinki.fi/exampleapp/new_note_spa
 server-->>browser: HTTP STATUS CODE 201 OK sends HTML file
-Note  right  of  browser: since its SPA application it will not redirect
-Note  right  of  browser: it uses ajax to render pages on updates
-participant  browser
-participant  server
+Note right of browser: since its SPA application it will not redirect
+Note right of browser: it uses ajax to render pages on updates
+participant browser
+participant server
 ```
